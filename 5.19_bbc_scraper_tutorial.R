@@ -1,6 +1,7 @@
 ####################################################
 # ## Eric Dunford, University of Maryland, College Park
 # ## May 19, 2016
+# ## Presentation: University of Iceland - R User Group
 # ## Topic: ABCs of Web Scraping - Script 2 (The Scraper)
 # ## dunforde@umd.edu - Please Feel Free to Contact Me
 ####################################################
@@ -35,7 +36,7 @@ httr::BROWSE(url)
         data.out = data.frame(headline,date,region)
         return(data.out)
       }
-      ralph(url) # Great!
+      ralph(url) 
       
 
 # Let's now run ralph on a number of URLs that we want information on. 
@@ -52,8 +53,6 @@ httr::BROWSE(url)
         store = rbind(store,ralph(i))
       }
       View(store)
-      
-      # We've officially made a scraper!
       
       
       
@@ -75,7 +74,7 @@ httr::BROWSE(url)
                              Total=data$data[[1]]$total_count)
         return(output)
       }
-      Relevance(url) # Nice!
+      Relevance(url) 
 
 
 # [3] Combine the two ------------------------------
@@ -102,7 +101,7 @@ httr::BROWSE(url)
       return(data.out)
     }
     
-    ralph2.0(url) # Looking good!
+    ralph2.0(url) 
     
     # Run a loop and store the output      
     store2 = NULL

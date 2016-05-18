@@ -1,6 +1,7 @@
 ####################################################
 # ## Eric Dunford, University of Maryland, College Park
 # ## May 19, 2016
+# ## Presentation: University of Iceland - R User Group
 # ## Topic: ABCs of Web Scraping - Script 1 (The Basics)
 # ## dunforde@umd.edu - Please Feel Free to Contact Me
 ####################################################
@@ -26,7 +27,7 @@ BROWSE(url) # examine the website.
 # USE THE PIPE
 # Given how "nested" the extraction code can get, it's important that to use the
 # pipe when constructing your code. The pipe "passes" tasks between functions
-# seemlessly.
+# seamlessly.
     # for example...
     round(sd(rnorm(100,5,6)),3) # Nested
     rnorm(100,5,6) %>% sd(.) %>% round(.,3) # Piped
@@ -101,4 +102,4 @@ output = list()
 output$headline = headline
 output$date = date
 output$story = body
-str(output) # Stored!
+str(output) 

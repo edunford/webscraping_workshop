@@ -6,7 +6,7 @@
 # ## dunforde@umd.edu - Please Feel Free to Contact Me
 ####################################################
 
-require(rvest);require(xml2);require(rjson)
+require(rvest);require(xml2);require(rjson);require(httr)
 # Let's use what we learned about the last script to construct a function that
 # takes in URLs and spits out formatted data.
 
@@ -32,7 +32,8 @@ httr::BROWSE(url)
           html_nodes(.,xpath="//*[@id='page']/div[2]/div[2]/div/div[1]/div[1]/div[1]/ul/li[1]/div") %>% 
           html_text(.) %>% as.Date(.,"%d %b %Y")
         region = raw %>% 
-          html_nodes(.,xpath="//*[@id='page']/div[2]/div[2]/div/div[1]/div[1]/div[1]/ul/li[2]/a") %>% html_text(.)
+          html_nodes(.,xpath="//*[@id='page']/div[2]/div[2]/div/div[1]/div[1]/div[1]/ul/li[2]/a") %>% 
+          html_text(.)
         data.out = data.frame(headline,date,region)
         return(data.out)
       }

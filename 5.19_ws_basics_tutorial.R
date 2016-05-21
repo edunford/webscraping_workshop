@@ -81,7 +81,7 @@ date.path = "#page > div:nth-child(2) > div.container > div > div.column--primar
 date = site %>% html_node(.,date.path) %>% html_text(.)
 # format date into a usable "R format"
 date = as.Date(date,"%d %b %Y")
-
+x
 # To get ALL of the body text, we really need to think about what it is we are
 # grabbing. Here comprehending the structure of the website can be really useful.
 
